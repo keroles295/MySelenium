@@ -1,0 +1,51 @@
+Selenium:
+
+Why do we need Xpath and Css Selector?
+---developers may not provide all the locators in html
+---By using xpath and Css we can identify elements with any given attributes
+What is an Xpath?
+---It is a like a query language which helps us to identify elements uniquely on the web page.
+Types of Xpath:
+---Absoulute Xpath--->it starts from the starting node of the html
+    it always starts from the single (/)
+    e.g/html/body/div
+---The Relative Xpath--->It starts from any node in html
+    it always starts with double //
+    the Syntax for relative xpath is:
+    //tagename[@attribute='attribute value']
+Identifying elements by its text:
+  //tagname[text() ='textvalue']
+  e.g //a[text() ='Create new account']
+  e.g //h2[text() ='Connect with friends and the world around you on Facebook.']
+Identify elements by its contains method:
+  //tagname[contains(@attribute, 'partial attribute value')]
+  //input[contains(@placeholder, 'or phone')]
+  //h2[contains(text(), 'the world')]
+Starts -with will identify elements by its partial starting value
+  //tagname[starts-with(@attribute, 'partial starting value')]
+  e.g //input[starts-with(@data-testid, 'royal')]
+  e.g //input[starts-with(@aria-label, 'Email')]
+ends-with was used in xpath 1.0, we are using 2.0 and this method is not available
+
+Advanced Xpath :
+  is based on parent and child, sibling relationships:
+  identify element by following sibling
+  //tagname[@attribute='attribute']/following-sibling::siblingtagname
+  e.g //input[@id='calFromDate']/following-sibling::img
+  //label[@for = 'leaveList_calFromDate']/following-sibling::img
+
+  identify element by precceding siblings
+  //tagname[@attribute='attribute']/preceding-sibling::siblingtagname
+  //span[text()='& Orders']/preceding-sibling::span
+
+  identify element by its parent:
+  //tagname[@attribute='attributeva']/parent::parenttagname
+  //span[text() = '& Orders']/parent::a
+
+  identifying elements by its ancestors:
+  //input[@id = 'email']/ancestor::form
+
+  identify elements by its index:
+  (//tagename[@attribute='attribute value'])[index]
+  (//img[@class = 'ui-datepicker-trigger'])[2]
+
