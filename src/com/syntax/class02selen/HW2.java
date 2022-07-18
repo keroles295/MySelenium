@@ -31,7 +31,8 @@ public class HW2 {
         Thread.sleep(4000);
         driver.findElement(By.xpath("(//input[@value='2'])[1]")).click();
         Thread.sleep(4000);
-        driver.findElement(By.xpath("//Button[@name='websubmit']")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Male')]"));
+        //driver.findElement(By.xpath("//Button[@name='websubmit']")).click();
         driver.findElement(By.xpath("//Img[@class='_8idr img']")).click();
 
 

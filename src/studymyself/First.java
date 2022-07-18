@@ -59,6 +59,12 @@ public class First {
 
 
         driver.quit();
+        //It happed to me while I was doing the homework so I did it this way, but I am not sure if this is the correct concept or not?
+        //driver.get("https://www.google.com//");
+        //        WebElement search=driver.findElement(By.xpath("//input[@aria-autocomplete='both']"));
+        //        search.sendKeys("www.amazon.com");
+        //       search.submit();
+        //        driver.findElement(By.xpath("(//a[@href='https://www.amazon.com/'])[1]")).click();
 
 
 
